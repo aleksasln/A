@@ -9,3 +9,13 @@ def random_number(): #Функция для выдачи рандомных но
         spam.remove(a)
     else:
         number.set(spam)
+root = Tk()
+root.title("GUI на Python")
+root.geometry("400x350")
+
+number = IntVar() #Чтобы переменная принимала различные целые значения
+
+btn = Button(text='''Нажмите на кнопку,
+                   \nчтобы определить Вашу очередность ''', background="#555", foreground="#ccc",
+             padx="20", pady="8", font="Verdana 13", command=random_number) #Создаем кнопку
+btn.pack()
