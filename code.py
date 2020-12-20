@@ -9,6 +9,7 @@ def random_number(): #Функция для выдачи рандомных но
         spam.remove(a)
     else:
         number.set(spam)
+
 root = Tk()
 root.title("GUI на Python")
 root.geometry("400x350")
@@ -19,3 +20,9 @@ btn = Button(text='''Нажмите на кнопку,
                    \nчтобы определить Вашу очередность ''', background="#555", foreground="#ccc",
              padx="20", pady="8", font="Verdana 13", command=random_number) #Создаем кнопку
 btn.pack()
+
+label1 = Label(textvariable=number, fg="#eee", bg="#333") #Создаем окно, изменяющие значение после нажатия на кнопку
+
+label1.place(relx=.5, rely=.5, anchor="c", height=30, width=130, bordermode=OUTSIDE)
+
+root.mainloop()
